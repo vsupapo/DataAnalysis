@@ -5,13 +5,6 @@
    BIWEEK: 9447646.1
    MONTH: 9374788.7
    WEEK: 8191710.7
-
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
-
 */
 SELECT payment_cycle, 
   SUM(quantity * price)
@@ -43,38 +36,27 @@ FROM mode.dunder_mifflin_paper_sales
 WHERE status = 'COMPLETED'
 GROUP BY payment_cycle
 
-/* Return the top product based on total sales for each payment cycle */
-SELECT product_name
-FROM mode.dunder_mifflin_paper_sales
-WHERE payment_cycle = 'ANNUAL' 
-  AND status = 'COMPLETED'
-GROUP BY product_name
-ORDER BY SUM(quantity * price) DESC
-LIMIT 1
-
-SELECT product_name
-FROM mode.dunder_mifflin_paper_sales
-WHERE payment_cycle = 'BIWEEK' 
-  AND status = 'COMPLETED'
-GROUP BY product_name
-ORDER BY SUM(quantity * price) DESC
-LIMIT 1
-
-SELECT product_name
-FROM mode.dunder_mifflin_paper_sales
-WHERE payment_cycle = 'MONTH' 
-  AND status = 'COMPLETED'
-GROUP BY product_name
-ORDER BY SUM(quantity * price) DESC
-LIMIT 1
-
-SELECT product_name
-FROM mode.dunder_mifflin_paper_sales
-WHERE payment_cycle = 'WEEK' 
-  AND status = 'COMPLETED'
-GROUP BY product_name
-ORDER BY SUM(quantity * price) DESC
-LIMIT 1
+/* Return the top product based on total sales for each payment cycle 
+   ANNUAL: EarthChoice Multipurpose Paper | 15778617.4
+   BIWEEK: TRU RED Multipurpose Paper | 5300820
+   MONTH: TRU RED Multipurpose Paper | 4832040
+   WEEK: TRU RED Multipurpose Paper | 3119190
+*/
+SELECT DISTINCT ON (s.payment_cycle)
+  s.payment_cycle,
+  s.product_name,
+  MAX(s.total_sales) AS "top_sale"
+FROM
+   ( SELECT payment_cycle, 
+        product_name, 
+        SUM(quantity) AS "units_sold", 
+        SUM(quantity * price) AS "total_sales"
+     FROM mode.dunder_mifflin_paper_sales
+     WHERE status = 'COMPLETED'
+     GROUP BY payment_cycle, product_name
+   ) s
+GROUP BY s.payment_cycle, s.product_name
+ORDER BY s.payment_cycle, top_sale DESC
 
 /* Return the total count of active accounts for each region for each payment cycle 
    ANNUAL
@@ -106,10 +88,7 @@ WHERE status = 'COMPLETED'
 GROUP BY payment_cycle, shipping_region
 ORDER BY payment_cycle, shipping_region
 
-/* Return a list of products, including units sold and total sales, for each payment cycle 
-   ANNUAL
-     UNITS SOLD: 6860
-*/
+/* Return a list of products, including units sold and total sales, for each payment cycle */
 SELECT payment_cycle, 
   product_name, 
   SUM(quantity) AS "units_sold", 
@@ -120,6 +99,24 @@ GROUP BY payment_cycle, product_name
 ORDER BY payment_cycle, "total_sales" DESC
 
 /* Return a list of clients with the top product sales for each payment cycle */
+SELECT s.payment_cycle,
+  s.account_name,
+  s.total_sales,
+  s.rank
+FROM
+   ( SELECT payment_cycle, 
+        account_name,
+        SUM(quantity * price) AS "total_sales",
+        RANK() OVER (
+           PARTITION BY payment_cycle
+           ORDER BY SUM(quantity * price) DESC, account_name
+      )
+   FROM mode.dunder_mifflin_paper_sales
+   WHERE status = 'COMPLETED'
+   GROUP BY payment_cycle, account_name
+   ORDER BY payment_cycle, total_sales DESC, account_name
+   ) s
+WHERE s.rank <= 12
 
 /* Return the average ratings received in each quarter */
 
