@@ -24,7 +24,7 @@ FROM mode.dunder_mifflin_paper_sales
 WHERE status = 'COMPLETED'
 GROUP BY payment_cycle
 
-/* Return the average rating received from accounts from each payment cycle 
+/* Return the average rating received from accounts for each payment cycle 
    ANNUAL: 3.764
    BIWEEK: 3.8229
    MONTH: 3.7438
@@ -118,7 +118,7 @@ FROM
    ) s
 WHERE s.rank <= 12
 
-/* Return the average ratings received in each quarter
+/* Return the average ratings received for each quarter
    Q1: 3.7836
    Q2: 3.7233
    Q3: 3.7552
@@ -130,7 +130,7 @@ FROM mode.dunder_mifflin_paper_sales
 GROUP BY quarter
 ORDER BY quarter
 
-/* Return the total count of managed accounts in each quarter 
+/* Return the total count of managed accounts for each quarter 
    Q1: 237
    Q2: 245
    Q3: 256
