@@ -2,5 +2,5 @@
 
 ## Data Extraction
 Data is extracted from Mode Studio using the following tables:  
-`mode.dunder_mifflin_paper_sales` 
+`mode.dunder_mifflin_paper_sales`   
 `novaksam.dm_employees` 
