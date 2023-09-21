@@ -1,4 +1,4 @@
-:bar_chart: # Data Analysis Using SQL and Power BI :chart_with_upwards_trend:
+# :bar_chart: Data Analysis Using SQL and Power BI :chart_with_upwards_trend:
 
 ## Description
 A collection of Data Analysis projects
