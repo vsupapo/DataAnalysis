@@ -6,8 +6,11 @@
    MONTH: 9374788.7
    WEEK: 8191710.7
 
-|--tABLE--|----------------------|
-| HELLO  |                    |
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 
 */
 SELECT payment_cycle, 
