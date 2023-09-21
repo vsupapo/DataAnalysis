@@ -6,10 +6,10 @@
 ## Overview
 Dunder Mifflin 2021 sales data is extracted and analyzed to provide insight on sales, clients, and company performance.
 
-### SQL Language
+#### SQL Language
 - PostgreSQL
 
-### Tools
+#### Tools
 - Mode Studio
 - Power BI
 
