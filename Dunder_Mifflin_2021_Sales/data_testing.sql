@@ -66,7 +66,7 @@ ORDER BY s.payment_cycle, top_sale DESC
      WEST: 99
    BIWEEK
      MIDWEST: 31
-     NORTHEAST: 56
+     NORTHEAST: 36
      SOUTH: 70
      WEST: 87
    MONTH
@@ -118,6 +118,26 @@ FROM
    ) s
 WHERE s.rank <= 12
 
-/* Return the average ratings received in each quarter */
+/* Return the average ratings received in each quarter
+   Q1: 3.7836
+   Q2: 3.7233
+   Q3: 3.7552
+   Q4: 3.7929
+*/
+SELECT EXTRACT(QUARTER FROM purchased_at) AS "quarter",
+  AVG(rating)
+FROM mode.dunder_mifflin_paper_sales
+GROUP BY quarter
+ORDER BY quarter
 
-/* Return the total count of managed accounts in each quarter */
+/* Return the total count of managed accounts in each quarter 
+   Q1: 237
+   Q2: 245
+   Q3: 256
+   Q4: 262
+*/
+SELECT EXTRACT(QUARTER FROM purchased_at) AS "quarter",
+  COUNT(account_id)
+FROM mode.dunder_mifflin_paper_sales
+GROUP BY quarter
+ORDER BY quarter
