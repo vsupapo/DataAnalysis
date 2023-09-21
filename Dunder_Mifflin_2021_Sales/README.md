@@ -43,3 +43,14 @@ The following tables are created using the queries found in the `data_extraction
 ## Data Quality Testing
 Data quality is ensured using the queries found in the `data_testing.sql` file.
 
+The queries found in the `data_testing.sql` file return the following data:
+- The total revenue for each payment cycle
+- The total active accounts for each payment cycle
+- The average rating received from accounts for each payment cycle
+- The top product based on total sales for each payment cycle
+- The total count of active accounts for each region for each payment cycle
+- A list of products, including units sold and total sales, for each payment cycle
+- A list of clients with the top product sales for each payment cycle
+- The average ratings received for each quarter
+- The total count of managed accounts for each quarter 
+
