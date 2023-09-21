@@ -40,5 +40,6 @@ The following tables are created using the queries found in the `data_extraction
 | 4 | Sales Representative | An overview of top clients by payment cycle | Can follow up on top clients who purchase the most product | A Power BI dashboard which allows for filtering top clients by payment cycle
 | 5 | Sales Representative | An overview of clients for each sales representative | Can follow up on clients as the account manager | A Power BI dashboard which allows for filtering clients by sales representatives
 
-## Acceptance Testing
+## Data Quality Testing
+Data quality is ensured using the queries found in the `data_testing.sql` file.
 
