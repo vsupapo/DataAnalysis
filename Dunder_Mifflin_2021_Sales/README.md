@@ -34,11 +34,12 @@ The following tables are created using the queries found in the `data_extraction
 
 | No # | As a [role] | I want [request/demand] | So that I [user value] | Acceptance Criteria |
 |------|-------------|-------------------------|------------------------|---------------------|
-| 1 | Sales Manager | An overview of product sales for each payment cycle | Can determine which products sell the most for each payment cycle | A Power BI dashboard which allows for filtering all product sales data by payment cycle
+| 1 | Sales Manager | An overview of product sales for each payment cycle | Can determine which products sell the most and find the total revenue generated for each payment cycle  | A Power BI dashboard which allows for filtering product sales by payment cycle
 | 2 | Sales Manager | An overview of sales representative ratings in each quarter | Can follow up on employee performance  | A Power BI dashboard which allows for filtering sales representative ratings by quarter
 | 3 | Sales Manager | An overview of regional product sales for each payment cycle | Can determine product demand for each payment cycle | A Power BI dashboard which allows for filtering product sales in each region by payment cycle
 | 4 | Sales Representative | An overview of top clients by payment cycle | Can follow up on top clients who purchase the most product | A Power BI dashboard which allows for filtering top clients by payment cycle
 | 5 | Sales Representative | An overview of clients for each sales representative | Can follow up on clients as the account manager | A Power BI dashboard which allows for filtering clients by sales representatives
+| 6 | Sales Manager | An overview of new accounts managed for each quarter | Can determine the peak periods of the year | A Power BI dashboard which allows for filtering all new accounts by quarter
 
 ## Data Quality Testing
 Data quality is ensured using the queries found in the `data_testing.sql` file.
