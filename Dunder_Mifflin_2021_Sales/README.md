@@ -1,5 +1,8 @@
 # :chart_with_upwards_trend: Dunder Mifflin 2021 Sales Analysis :chart_with_downwards_trend:
 
+![DM_PBI](https://github.com/vsupapo/DataAnalysis/assets/60374437/bcb12a4d-53fc-41ca-bdfd-de5cb09ebbd4)
+
+
 ## Overview
 Dunder Mifflin 2021 sales data is extracted and analyzed to provide insight on sales, clients, and company performance.
 
