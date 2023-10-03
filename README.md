@@ -11,4 +11,3 @@ A collection of Data Analysis projects and practice problems
 - Mode Studio
 - Power BI
 - Leetcode
-- DataLemur
