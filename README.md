@@ -5,7 +5,10 @@ A collection of Data Analysis projects
 
 ## SQL Languages
 - PostgreSQL
+- MySQL
 
 ## Tools
 - Mode Studio
 - Power BI
+- Leetcode
+- DataLemur
