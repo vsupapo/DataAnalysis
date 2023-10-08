@@ -16,7 +16,7 @@ Slicers have been implemented for the following properties:
 
 ### Payment Cycle
 Using the toggle at the top right of the dashboard, view sales data based on account payment cycle.  
-Payment cycle for each account can be one of the following properties:
+Payment cycle can be set to:
 - Annual  
 - Biweek  
 - Month
