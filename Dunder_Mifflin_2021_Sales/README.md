@@ -1,6 +1,7 @@
 # :chart_with_upwards_trend: Dunder Mifflin 2021 Sales Analysis :chart_with_downwards_trend:
 
-![DM_PBI](https://github.com/vsupapo/DataAnalysis/assets/60374437/bcb12a4d-53fc-41ca-bdfd-de5cb09ebbd4)
+
+![ER Diagram](https://github.com/vsupapo/SQLDataAnalysis/assets/60374437/15d1ef73-e288-49ad-878e-f87bd134c297)
 
 
 ## Overview
