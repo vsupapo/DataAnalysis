@@ -1,7 +1,7 @@
 # :chart_with_upwards_trend: Dunder Mifflin 2021 Sales Dashboard :chart_with_downwards_trend:
 
 ## Overview
-This dashboard provides insight on Dunder Mifflin Paper Co. Sales in 2021.
+This dashboard provides insight on Dunder Mifflin Paper Co. Sales data from 2021.
 
 ### Tools
 - Mode Studio  
