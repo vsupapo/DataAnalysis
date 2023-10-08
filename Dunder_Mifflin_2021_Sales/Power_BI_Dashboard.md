@@ -2,3 +2,5 @@
 
 
 ![DM_PBI](https://github.com/vsupapo/SQLDataAnalysis/assets/60374437/7b6721a7-5177-485e-acf4-f01b55078b71)
+
+![biweek](https://github.com/vsupapo/SQLDataAnalysis/assets/60374437/18c7f42d-6086-4070-b95d-3d04a00fd3b7)
