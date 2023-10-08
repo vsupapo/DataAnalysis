@@ -16,11 +16,15 @@ Payment cycle for each account can be one of the following properties:
 - Annual  
 - Biweek  
 - Month
-- Week  
+- Week
+
+The following screenshot shows sales data for accounts on a biweekly payment cycle:
 
 ![biweek](https://github.com/vsupapo/SQLDataAnalysis/assets/60374437/df81ea11-b4ee-4a11-a616-374888249164)
 
 #### Payment Cycle
 Using the drop down menu at the top middle of the dashboard, view sales data based on account manager.  
+
+The following screenshot shows sales data for accounts managed by Dwight Schrute:
 
 ![dwight](https://github.com/vsupapo/SQLDataAnalysis/assets/60374437/b6821714-16c6-4c5a-b2c2-730fb8d25a82)
