@@ -1,16 +1,20 @@
 # :chart_with_upwards_trend: Dunder Mifflin 2021 Sales Dashboard :chart_with_downwards_trend:
 
-## Description
-This dashboard provides insight on Dunder Mifflin Paper Co. Sales in 2021 using data from Mode Studio.  
+## Overview
+This dashboard provides insight on Dunder Mifflin Paper Co. Sales in 2021.
+
+### Tools
+- Mode Studio  
+- Power BI  
 
 ![DM_PBI](https://github.com/vsupapo/SQLDataAnalysis/assets/60374437/7b6721a7-5177-485e-acf4-f01b55078b71)
 
-### Slicers
+## Slicers
 Slicers have been implemented for the following properties:  
 - Payment Cycle  
 - Account Manager  
 
-#### Payment Cycle
+### Payment Cycle
 Using the toggle at the top right of the dashboard, view sales data based on account payment cycle.  
 Payment cycle for each account can be one of the following properties:
 - Annual  
@@ -22,7 +26,7 @@ The following screenshot shows sales data for accounts on a biweekly payment cyc
 
 ![biweek](https://github.com/vsupapo/SQLDataAnalysis/assets/60374437/df81ea11-b4ee-4a11-a616-374888249164)
 
-#### Payment Cycle
+### Account Manager
 Using the drop down menu at the top middle of the dashboard, view sales data based on account manager.  
 
 The following screenshot shows sales data for accounts managed by Dwight Schrute:
