@@ -5,3 +5,5 @@
 
 
 ![biweek](https://github.com/vsupapo/SQLDataAnalysis/assets/60374437/df81ea11-b4ee-4a11-a616-374888249164)
+
+![dwight](https://github.com/vsupapo/SQLDataAnalysis/assets/60374437/b6821714-16c6-4c5a-b2c2-730fb8d25a82)
